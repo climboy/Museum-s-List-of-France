@@ -26,9 +26,7 @@
     </div>
   </div>
 </nav>
-<div class="container">
-<img src="css/logo.png">
-</div>
+
 
 <ul class="vertical">
   <li><a href="#">Home</a></li>
