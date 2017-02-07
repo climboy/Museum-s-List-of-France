@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -27,11 +26,24 @@
     </div>
   </div>
 </nav>
+<div class="container">
 <img src="css/logo.png">
+</div>
 
 <ul class="vertical">
   <li><a href="#">Home</a></li>
   <li><a href="#">News</a></li>
 </ul>
-  </body>
+<ul class="vertical">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+</ul>
+<ul class="vertical">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+</ul>
+<div class="container">
+  <img class="cadre1"src="css/cadre.png">
+</div>
+</body>
 </html>

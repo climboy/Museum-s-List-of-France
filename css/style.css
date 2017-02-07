@@ -6,21 +6,25 @@ img
 {
   width: 11em;
   height: 5em;
-  margin-left: 42em;
+  margin-left: 19em;
 top: -3.7em;
-  position: relative;
+}
 
+p
+{
+  margin-top: 5em;
 }
 li.col-sm-4
 {
-  margin-top: 0.8em;
+
   font-size: 2em;
   margin-left: 1.6em;
 }
 .search
 {
   margin-top: 10em;
-  margin-left: 27.8em;
+  margin-left: 3em;
+
 }
 input
 {
@@ -29,26 +33,27 @@ input
 }
 .museum
 {
-  margin-top: 15em;
+  margin-top: 32em;
   width: 45em;
   text-align: center;
-  margin-left: 26em;
+  margin-left: 1.5em;
+
 }
 .museum1
 {
   margin-top: 30em;
   width: 45em;
   text-align: center;
-  margin-left: 26em;
+  margin-left: 5.3em;
 }
 ul.vertical{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin-left: 1em;
+    padding: 0em;
     width: 4.3em;
     text-align: center;
-    background-color: #000000;
-    border-radius: 0.6em;
+    background-color: #1B1C1C;
+    border-radius: 0.4em;
 }
 
 ul.vertical li a {
@@ -56,3 +61,18 @@ ul.vertical li a {
     width: 60px;
 
     color: #9d9d9d;
+}
+.container
+{
+  width: 50em;
+}
+.cadre1
+{
+  width: 26em;
+  height: 13em;
+  margin-left: 12em;
+}
+.container2
+{
+  width: 50em;
+}
