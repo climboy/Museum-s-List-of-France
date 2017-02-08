@@ -1,3 +1,16 @@
+<?php
+try{
+  $bdd = new PDO('mysql:host=localhost;dbname=musee;charset=utf8', 'root', '');
+}
+
+catch (Exception $e){
+  die('Erreur : ' . $e->getMessage());
+}
+
+$reponses = $bdd->query("SELECT * FROM musee ORDER BY VILLE ASC");
+
+
+  ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,25 +57,35 @@
 
 <div class="col-sm-11">
   <div class="row">
-    <div class="cadre col-sm-3">
-      <div class="border">
-        <img class="ca"src="css/garet.jpg">
-      </div>
-      <div class="texte">
-        <h3>Nom du musée</h3>
-        <p>ceci est un texte</p>
-      </div>
-    </div>
-    <div class="cadre col-sm-3">
-      <div class="border">
-        <img class="ca"src="css/garet.jpg">
-      </div>
-      <div class="texte">
-        <h3>Nom du musée</h3>
-        <p>ceci est un texte</p>
-      </div>
-    </div>
+
+    <?php
+    foreach($reponses as $reponse){
+      echo"<div class='cadre col-sm-3'>";
+      echo "<a href='affichage.php?id=" . $reponse["id"] . "'>";
+      echo"<div class='border'>";
+      echo "<img class='ca'src='" . $reponse["IMAGES"] . "'>";
+      echo "</div>";
+      echo "<div class='texte'>";
+      echo "<h3>" . $reponse["NOM DU MUSEE"] . "</h3>";
+      echo "<p>" . $reponse["ADR"] . " " . $reponse["VILLE"] . "</p>";
+      echo "</div>";
+      echo "</a>";
+      echo "</div>";
+    }
+     ?>
   </div>
 </div>
+
+<footer>
+ <div class="col-sm-12">
+   <div class="row">
+     <div class="col-sm-3"></div>
+     <div class="col-sm-3"></div>
+     <div class="col-sm-3"></div>
+     <div class="col-sm-3"></div>     
+
+ </div>
+ </div>
+</footer>
 </body>
 </html>
