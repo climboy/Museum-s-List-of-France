@@ -27,21 +27,42 @@
   </div>
 </nav>
 
+<!-- <div class="col-sm-1"> -->
+<!-- <ul class="vertical"> -->
+  <!-- <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+</ul>
+<ul class="vertical">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+</ul>
+<ul class="vertical">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">News</a></li>
+</ul> -->
+<!-- </div> -->
 
-<ul class="vertical">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">News</a></li>
-</ul>
-<ul class="vertical">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">News</a></li>
-</ul>
-<ul class="vertical">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">News</a></li>
-</ul>
-<div class="container">
-  <img class="cadre1"src="css/cadre.png">
+<div class="col-sm-11">
+  <div class="row">
+    <div class="cadre col-sm-3">
+      <div class="border">
+        <img class="ca"src="css/garet.jpg">
+      </div>
+      <div class="texte">
+        <h3>Nom du musée</h3>
+        <p>ceci est un texte</p>
+      </div>
+    </div>
+    <div class="cadre col-sm-3">
+      <div class="border">
+        <img class="ca"src="css/garet.jpg">
+      </div>
+      <div class="texte">
+        <h3>Nom du musée</h3>
+        <p>ceci est un texte</p>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 </html>

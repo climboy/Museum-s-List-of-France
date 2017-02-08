@@ -27,10 +27,22 @@
     </div>
   </div>
 </nav>
-<div class="container">
-<div class="museum1">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
+<div class="container-fluid">
+ <div class="row">
+   <div class="col-sm-4">
+     <div class="border">
+       <img class="image"src="css/garet.jpg">
+     </div>
+   </div>
+    <div class="col-sm-8">
+      <p class="infos">Region, Département, Ville, Adresse, Code Postale</p>
+      <p class="infos">Téléphone, Fax</p>
+      <p class="infos">Site Web</p>
+      <p class="infos">Période d'ouverture</p>
+      <p class="infos">Fermeture annuelle</p>
+      <p class="infos">Jours Nocturnes</p>
+    </div>
+ </div>
 </div>
   </body>
 </html>

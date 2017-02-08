@@ -38,10 +38,10 @@ input
 }
 ul.vertical{
     list-style-type: none;
-    margin-left: 1em;
+
     padding: 0em;
     width: 4.3em;
-    text-align: center;
+
     background-color: #1B1C1C;
     border-radius: 0.4em;
 }
@@ -73,4 +73,48 @@ ul.vertical li a {
   background-size: 100%;
   width: 100%;
   height: 700px;
+}
+.cadre
+{
+  display: inline-block;
+}
+.ca
+{
+  width: 99.8%;
+  height: 90%;
+  margin-top: 5%;
+  padding: 5%;
+  margin: 0px;
+}
+.border
+{
+  border: 2px 2px solid;
+  border-radius: 10px 10px 0px 0px;
+  background-color: #808080;
+}
+.texte
+{
+  text-align: center;
+  border: 2px 2px solid;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #DCDCDC;
+  padding: 5%;
+  color: #000000;
+  font-family: "Rockwell";
+}
+.image
+{
+  width: 99.8%;
+  height: 90%;
+  margin-top: 5%;
+  padding: 5%;
+  margin: 0px;
+}
+.col-sm-4
+{
+  ma
+}
+.infos
+{
+  margin-top: 3%;
 }
