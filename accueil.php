@@ -31,8 +31,12 @@
 </nav>
 
 
+
 <div class="container" id="background">
+<form action="recherche.php" method="GET">
 <input class="col-sm-6 col-sm-offset-3" type="text" name="search" placeholder="Recherche">
+<input class="col-sm-1 col-sm-offset-1" type="submit" name="submit" placeholder="envoyer">
+</form>
 </div>
 
 
