@@ -96,6 +96,11 @@ left:0;
 right:0;
 }
 
+.search-btn {
+	background-color: #434A54;
+	color: #FFFFFF;
+}
+
 .fixed {
 position:fixed;
 bottom:0;
