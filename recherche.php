@@ -7,11 +7,7 @@ catch (Exception $e){
 }
 if(isset($_GET['search']))
 {
-<<<<<<< HEAD
   $recherche=$_GET['search'];
-=======
-  $recherche=$_GET['search'];  
->>>>>>> origin/master
   $reponses = $bdd->query("SELECT * FROM musee WHERE VILLE LIKE '%$recherche%' OR ADR LIKE '%$recherche%' OR NOMDUMUSEE LIKE '%$recherche%' OR NOMDEP LIKE '%$recherche%' OR NOMREG LIKE '%$recherche%' OR CP LIKE '%$recherche%'  ORDER BY VILLE ASC");
 }
 else{
@@ -32,12 +28,9 @@ else{
   <title>Musées</title>
 </head>
 <body>
-<<<<<<< HEAD
  <header id="header"role="banner">
   <h1>Guide de Musées</h1>
  </header>
-=======
->>>>>>> origin/master
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -85,30 +78,12 @@ else{
     }
 
     ?>
-<<<<<<< HEAD
   </div>
 
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 
 <script type="text/javascript" language="javascript">
 $(window).scroll(function() {
-=======
-  </div>
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity" style="margin-top:128px">
-  <div class="w3-xlarge w3-padding-32">
-    <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
-    <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
-    <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
-    <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
-    <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
-  </div>
-  <p style="font-weight:normal">Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-
-<script type="text/javascript" language="javascript">
-$(window).scroll(function() {    
->>>>>>> origin/master
     var scroll = $(window).scrollTop();
     if (scroll >= 200) {
         $(".menu").addClass("fixed");
@@ -117,13 +92,10 @@ $(window).scroll(function() {
     }
 });
 </script>
-<<<<<<< HEAD
 <footer role="contentinfo">
   <img class="logo"src="css/facebook.png">
   <img class="logo"src="css/twitter.png">
   <img class="logo"src="css/slack.png">
 </footer>
-=======
->>>>>>> origin/master
 </body>
 </html>
