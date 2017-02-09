@@ -28,6 +28,7 @@ try {
     <title>Musées</title>
   </head>
   <body>
+<<<<<<< HEAD
   <header id="header"role="banner">
    <h1 class="titre">Guide de Musées</h1>
   </header>
@@ -49,6 +50,25 @@ try {
           </li>
         </ul>
       </div>
+=======
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+       <span class="sr-only">Toggle navigation</span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="col-sm-4"><a href="accueil.php">Accueil</a></li>
+
+                    <li class="col-sm-4"><a href="recherche.php">Musées</a></li>
+
+                </ul>
+>>>>>>> origin/master
     </div>
   </nav>
 
@@ -59,18 +79,30 @@ try {
   if (isset($id)) // On a l'id
   {
 
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> origin/master
     if ($id>=0)
     {
       $query  = $bdd->query("SELECT * FROM musee WHERE id = $id");// $query=récupère tes données voulues dans ta base de donnée
       $fetch  = $query->fetch();// fetch=transforme le résultat de la requête en tableau
+<<<<<<< HEAD
       if ($fetch==false)
+=======
+      if ($fetch==false) 
+>>>>>>> origin/master
       {
         echo "pas bon";
       }
       else
       {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/master
         echo "<div class='col-sm-4'>";
         echo "<div class='border'>";
         echo "<img class='image' src='".$fetch["IMAGES"]."'>";
@@ -101,7 +133,11 @@ try {
 
  ?>
 
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> origin/master
  </div>
 </div>
 <footer role="contentinfo">

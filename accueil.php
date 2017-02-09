@@ -33,11 +33,17 @@
 
 
 
+
 <div class="container" id="background">
 <form action="recherche.php" method="GET">
+<<<<<<< HEAD
   <h2>Tout les musées de France répertoriés sur notre site.</h2>
 <input class="col-sm-6 col-sm-offset-3" id="recherche"type="text" name="search" placeholder="Recherche">
 <input class="col-sm-2 col-sm-offset-5" id="envoi"type="submit" name="submit" placeholder="envoyer">
+=======
+<input class="col-sm-6 col-sm-offset-3" type="text" name="search" placeholder="Recherche">
+<input class="col-sm-1 col-sm-offset-1" type="submit" name="submit" placeholder="envoyer">
+>>>>>>> origin/master
 </form>
 </div>
 
