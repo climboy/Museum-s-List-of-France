@@ -24,44 +24,43 @@ else{
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="Bootstrap/css/Bootstrap.min.css">
   <link rel="stylesheet" href="css/recherche.css">
-
   <title>Musées</title>
 </head>
 <body>
  <header id="header"role="banner">
   <h1>Guide de Musées</h1>
  </header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right" style="width:100%;">
-          <li class="col-sm-4"><a class="valign" href="accueil.php">Accueil</a></li>
-          <li class="col-sm-4"><a class="valign" href="recherche.php">Musées</a></li>
-          <li class="col-sm-4">
-            <form class="form-group" method="GET" action="recherche.php">
-              <div class="input-group input-group-md icon-addon vpadding">
-                <input type="text" placeholder="Texte" name="search" id="schbox" class="form-control">
-                <i class="icon icon-search"></i>
-                <span class="input-group-btn">
+ <nav class="navbar navbar-default">
+     <div class="container-fluid">
+         <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+         </div>
+         <div class="collapse navbar-collapse" id="myNavbar">
+             <ul class="nav navbar-nav navbar-right" style="width:100%;">
+                 <li class="col-sm-4"><a class="valign" href="accueil.php">Accueil</a></li>
+                 <li class="col-sm-4"><a class="valign" href="recherche.php">Musées</a></li>
+                 <li class="col-sm-4">
+                     <form class="form-group" method="GET" action="recherche.php">
+                         <div class="input-group input-group-md icon-addon vpadding">
+                             <input type="text" placeholder="Texte" name="search" id="schbox" class="form-control">
+                             <i class="icon icon-search"></i>
+                             <span class="input-group-btn">
                   <button type="submit" class="btn btn-inverse">Rechercher</button>
                 </span>
-              </div>
-            </form>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+                         </div>
+                     </form>
+                 </li>
+             </ul>
+         </div>
+     </div>
+ </nav>
 
-  <div class="masonry">
+ <div class="masonry">
     <?php
     foreach($reponses as $reponse){
       echo"<div class='item'>";
@@ -80,9 +79,9 @@ else{
     ?>
   </div>
 
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+ <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 
-<script type="text/javascript" language="javascript">
+ <script type="text/javascript" language="javascript">
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 200) {
@@ -92,6 +91,7 @@ $(window).scroll(function() {
     }
 });
 </script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <footer role="contentinfo">
   <img class="logo"src="css/facebook.png">
   <img class="logo"src="css/twitter.png">
