@@ -23,8 +23,9 @@ try {
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="Bootstrap/css/Bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/affichage.css">
     <title>Musées</title>
   </head>
   <body>
@@ -32,82 +33,90 @@ try {
    <h1 class="titre">Guide de Musées</h1>
   </header>
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right" style="width:100%;">
+                  <li class="col-sm-4"><a class="valign" href="accueil.php">Accueil</a></li>
+                  <li class="col-sm-4"><a class="valign" href="recherche.php">Musées</a></li>
+                  <li class="col-sm-4">
+                      <form class="form-group" method="GET" action="recherche.php">
+                          <div class="input-group input-group-md icon-addon vpadding">
+                              <input type="text" placeholder="Texte" name="search" id="schbox" class="form-control">
+                              <i class="icon icon-search"></i>
+                              <span class="input-group-btn">
+                  <button type="submit" class="btn btn-inverse">Rechercher</button>
+                </span>
+                          </div>
+                      </form>
+                  </li>
+              </ul>
+          </div>
       </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right" style="width:100%;">
-          <li class="col-sm-4"><a class="valign" href="accueil.php">Accueil</a></li>
-          <li class="col-sm-4"><a class="valign" href="recherche.php">Musées</a></li>
-          <li class="col-sm-4">
-          </li>
-        </ul>
-      </div>
-    </div>
   </nav>
 
-<div class="container-fluid">
- <div class="row">
-
- <?php
-  if (isset($id)) // On a l'id
-  {
+  <div class="container-fluid">
+    <div class="row">
 
 
-    if ($id>=0)
-    {
-      $query  = $bdd->query("SELECT * FROM musee WHERE id = $id");// $query=récupère tes données voulues dans ta base de donnée
-      $fetch  = $query->fetch();// fetch=transforme le résultat de la requête en tableau
-      if ($fetch==false)
-      {
-        echo "pas bon";
-      }
-      else
-      {
-
-        echo "<div class='col-sm-4'>";
-        echo "<div class='border'>";
-        echo "<img class='image' src='".$fetch["IMAGES"]."'>";
-        echo "</div>";
-        echo "</div>";
-        echo "<div class='col-sm-8'>";
-        echo "<h1>".$fetch["NOMDUMUSEE"]."</h1>";
-        echo "<p class='infos'>localisation : ".$fetch["NOMREG"].", ".$fetch["NOMDEP"].", ".$fetch["VILLE"].", ".$fetch["ADR"].",". $fetch["CP"]."</p>";
-        echo "<p class='infos'>".$fetch["TELEPHONE1"].", ".$fetch["FAX"]."</p>";
-        echo "<p class='infos'>".$fetch["SITWEB"]."</p>";
-        echo "<p class='infos'>".$fetch["PERIODE OUVERTURE"]."</p>";
-        echo "<p class='infos'>".$fetch["FERMETURE ANNUELLE"]."</p>";
-        echo "<p class='infos'>".$fetch["JOURS NOCTURNES"]."</p>";
-        echo "</div>";
-      }
-    }
-    else
-    {
-      echo "votre id est invalide";
-    }
-  }
-  else // Il manque des paramètres, on avertit le visiteur
-  {
-
-    echo 'id introuvable !';
-
-  }
-
- ?>
+    <?php
+         if (isset($id)) {
+            if ($id>=0) {
+                $query  = $bdd->query("SELECT * FROM musee WHERE id = $id");
+                $fetch  = $query->fetch();
+                if ($fetch==false) {
+                    echo "pas bon";
+                }  else  {
+                    echo "<div class='col-sm-4'>";
+                    echo "<img class='image2' src='".$fetch["IMAGES"]."'>";
+                    echo "</div>";
+                    echo "<div class='col-sm-8'>";
+                    echo "<h2>".$fetch["NOMDUMUSEE"]."</h2>";
+                    echo "<p class='infos'>Région : " . $fetch["NOMREG"] . "</p>";
+                    echo "<p class='infos'>Département : " . $fetch["NOMDEP"] . "</p>";
+                    echo "<p class='infos'>localisation : " . "<em id='adresse'>" . $fetch["ADR"] . " " . $fetch["CP"] . " " . $fetch["VILLE"] . "</em></p>";
+                    if ($fetch["TELEPHONE1"] != "")
+                    echo "<p class='infos'>Téléphone : " . $fetch["TELEPHONE1"] . "</p>";
+                    if ($fetch["FAX"] != "")
+                        echo "<p class='infos'>Fax : " . $fetch["FAX"] . "</p>";
+                    if ($fetch["SITWEB"] != "")
+                        echo "<p class='infos'>Site Web : " . $fetch["SITWEB"] . "</p>";
+                    if ($fetch["PERIODE OUVERTURE"] != "")
+                        echo "<p class='infos'>Periode D'ouverture : " . $fetch["PERIODE OUVERTURE"] . "</p>";
+                    if ($fetch["FERMETURE ANNUELLE"] != "")
+                        echo "<p class='infos'>Periode de fermeture : " . $fetch["FERMETURE ANNUELLE"] . "</p>";
+                    if ($fetch["JOURS NOCTURNES"] != "")
+                        echo "<p class='infos'>Jours de nocturnes : " . $fetch["JOURS NOCTURNES"] . "</p>";
+                    echo "</div>";
+                }
+            } else {
+                echo "votre id est invalide";
+            }
+         } else {
+            echo 'id introuvable !';
+         }
+     ?>
 
 
- </div>
-</div>
-<footer role="contentinfo">
-  <img class="logo"src="css/facebook.png">
-  <img class="logo"src="css/twitter.png">
-  <img class="logo"src="css/slack.png">
-</footer>
+    </div>
+  </div>
+  <div id="map" style="width: 100%;height: 400px;"></div>
+  <footer role="contentinfo">
+    <img class="logo"src="css/facebook.png">
+    <img class="logo"src="css/twitter.png">
+    <img class="logo"src="css/slack.png">
+  </footer>
+
+  <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCdpE0sQVl9CJHh9DGGZUttQa5xpfNNEBg"></script>
+  <script type="text/javascript" src="javascript/jquery.googlemap.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </body>
 </html>
